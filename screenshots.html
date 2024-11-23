@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenshot</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    background-color: beige;
+}
+
+
+.capture {
+    flex: 1 1 350px;
+    height: auto;
+    background-color: black;
+    padding: 5px;
+    margin: 5px;
+   
+}
+.capture img{
+    display: block;
+    margin-top: 10px;
+    width: 450px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+       .wrapper {
+           grid-template-columns: 1fr;
+           grid-template-rows: auto;
+       }
+   
+       .mainheader{
+        grid-row:1/1;
+       }
+       .navigationbar{
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row: 2/2;
+       }
+       .capture{
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start:4;
+              grid-row-end: 8;
+       }
+
+   }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="mainheader">
+            <h2>Screenshots </h2>
+        </header>
+        <nav class="navigationbar">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="features.html">Features</a>
+            
+        </nav>
+        <article>
+        <div class="wrapper">
+            <div class="capture">
+                <img src="./pictures/screen_rdr2.jpg" alt="Red Dead Redemption2">
+                <h4>Red Dead Redemption 2</h4>
+            </div>
+            <div class="capture">
+                <img src="./pictures/Anno1800.jpg" alt="Anno 1800">
+                <h4>Anno 1800</h4>
+            </div>
+            <div class="capture">
+                <img src="./pictures/screen_baldurs.jpg" alt="Baldur's Gate">
+                <h4>Baldur's Gate</h4>
+            </div>
+            <div class="capture">
+                <img src="./pictures/screen_cyberpunk.jpg" alt="Cyberpunk 2077">
+                <h4>Cyberpunk 2077</h4>
+            </div>
+            <div class="capture">
+                <img src="./pictures/screen_quake.jpg" alt="Quake">
+                <h4>Quake Champions</h4>
+            </div>
+            <div class="capture">
+                <img src="./pictures/screen_diablo.jpg" alt="Diablo">
+                <h4>Diablo IV</h4>   
+            </div>
+        </div>
+        </article>
+        <footer class="footerbar">Copyright 2025  Website designer: Charles Rada</footer>
+    </div>
+</body>
+</html>
